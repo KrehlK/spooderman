@@ -17,6 +17,7 @@ word = input("Enter a word of your choice: ") # Lets user input selected word
 
 hypoList = ""
 
+# Add only the lemmas from each synset to a string
 for synset in wn.synsets(word):
     for lemma in synset.lemmas():
         hypoList += lemma.name() + ", "
@@ -32,6 +33,7 @@ third = input("Third word: ")
 wordList = first + ", " + second + ", " + third
 print("Here are the words you have chosen: " + wordList) # Returns a complete list of the user selected words
 
+# Query for the ChatBot
 query = "Guess the root hypernym of the words" + wordList
 
 # Create a ChatBot
@@ -45,7 +47,3 @@ chatbot.change_conversation(id)
 
 # Get conversation list
 conversation_list = chatbot.get_conversation_list()
-
-
-
-
