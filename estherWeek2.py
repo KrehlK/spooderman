@@ -1,12 +1,11 @@
 import nltk
 nltk.download('wordnet')
-nltk.download('omw-1.4') #import language package
 from nltk.corpus import wordnet as wn
 
 hyper = "hypernym"
 hypo = "hyponym"
 
-word = input("Enter a word of your choice: ") # 
+word = input("Enter a word of your choice: ") # lets user input selected word
 print("You have selected the word " + "\"" + word + "\"")
 firstSynset = wn.synsets(word)[0] # get the first synset of the complete list of synsets for the word inputted
 
