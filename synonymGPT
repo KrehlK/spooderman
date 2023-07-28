@@ -1,0 +1,9 @@
+import openai
+import nltk
+from nltk.corpus import wordnet as wn
+import itertools
+
+response = openai.Completion.create(
+  model="text-davinci-003",
+  prompt="What is a word you want the synonyms for?"
+)
